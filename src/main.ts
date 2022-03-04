@@ -1,7 +1,14 @@
+import msg from "msg.js";
 import { SkyRouter } from "skyrouter";
+import superagent from "superagent";
+import BrowserInfo from "./BrowserInfo";
+
 import CheckHolder from "./view/CheckHolder";
 
 (async () => {
+    msg.language = BrowserInfo.language;
+    msg.parseCSV((await superagent.get("/msg.csv")).text);
+
     SkyRouter.route("checkholder", CheckHolder);
 
     if (sessionStorage.__spa_path) {

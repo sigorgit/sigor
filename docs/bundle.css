@@ -165,4 +165,446 @@ input {
   clear: both;
   visibility: hidden;
 }
+.dialogue.alert {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  background-color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.dialogue.alert > h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 16px;
+}
+.dialogue.alert > p {
+  padding: 0px 16px 8px 16px;
+  font-size: 0.875rem;
+  line-height: 1.2em;
+}
+.dialogue.alert > .button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.dialogue.alert > .button-container > button {
+  background-color: transparent;
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+.dialogue.alert > .button-container > button:hover {
+  background-color: rgba(177, 156, 118, 0.8);
+}
+.dialogue.alert > .button-container > button:active {
+  background-color: #b19c76;
+}
+.dialogue.confirm {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  background-color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.dialogue.confirm > h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 16px;
+}
+.dialogue.confirm > p {
+  padding: 0px 16px 8px 16px;
+  font-size: 0.875rem;
+  line-height: 1.2em;
+}
+.dialogue.confirm > .button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.dialogue.confirm > .button-container > button {
+  background-color: transparent;
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+.dialogue.confirm > .button-container > button:hover {
+  background-color: rgba(177, 156, 118, 0.8);
+}
+.dialogue.confirm > .button-container > button:active {
+  background-color: #b19c76;
+}
+.dialogue.prompt {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  background-color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.dialogue.prompt > h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 16px;
+}
+.dialogue.prompt > p {
+  padding: 0px 16px 8px 16px;
+  font-size: 0.875rem;
+  line-height: 1.2em;
+}
+.dialogue.prompt > .input-container {
+  margin-top: 8px;
+  padding: 0 16px;
+}
+.dialogue.prompt > .input-container > input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px;
+  height: 36px;
+  border: 1px solid #e4e8eb;
+  background-color: transparent;
+  color: white;
+}
+.dialogue.prompt > .input-container > input:hover {
+  border: 1px solid #b19c76;
+}
+.dialogue.prompt > .input-container > input:focus {
+  border: 1px solid #b19c76;
+}
+.dialogue.prompt > .button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.dialogue.prompt > .button-container > button {
+  background-color: transparent;
+  color: white;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+.dialogue.prompt > .button-container > button:hover {
+  background-color: rgba(177, 156, 118, 0.8);
+}
+.dialogue.prompt > .button-container > button:active {
+  background-color: #b19c76;
+}
+.connect-wallet-popup {
+  position: relative;
+  max-width: 420px;
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  background-color: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.connect-wallet-popup > h2 {
+  font-size: 24px;
+  padding: 16px;
+}
+.connect-wallet-popup > p {
+  padding: 16px;
+  border-top: 1px solid #CCC;
+  color: #CCC;
+}
+.connect-wallet-popup > .button-container {
+  padding: 16px;
+}
+.connect-wallet-popup > .button-container > a {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.connect-wallet-popup > .button-container > a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.connect-wallet-popup > .button-container > a > img {
+  margin-right: 10px;
+}
+.connect-wallet-popup > .button-container > .connect-kaikas-button {
+  background-color: #6f6558;
+  color: #ffffff;
+}
+.connect-wallet-popup > .button-container > .connect-klip-button {
+  background-color: #fee500;
+  color: #000000;
+}
+.connect-wallet-popup > .button-container > .cancel-button {
+  border: 1px solid #ffffff;
+}
+.klip-qr-popup {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  background-color: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.klip-qr-popup > h2 {
+  font-size: 24px;
+  padding: 16px;
+}
+.klip-qr-popup > .qr {
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  padding: 16px 0;
+  text-align: center;
+}
+.klip-qr-popup > p {
+  margin-top: 16px;
+  padding: 0 16px;
+  color: white;
+}
+.klip-qr-popup > .button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.klip-qr-popup > .button-container > button {
+  background-color: transparent;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.klip-qr-popup > .button-container > button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.popup-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 20px 0;
+}
+.user-menu > .connect-wallet,
+.user-menu > .wallet-address {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #b19c76;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.user-menu > .connect-wallet,
+.user-menu > .wallet-address:hover {
+  background-color: #b19c76;
+  color: white;
+}
+.user-menu > .wallet-address {
+  position: relative;
+  cursor: pointer;
+}
+.user-menu > .wallet-address > ul {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 100px;
+  display: none;
+  background-color: #222;
+  padding: 10px 0;
+}
+.user-menu > .wallet-address > ul > li > a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+.user-menu > .wallet-address > ul > li > a:hover {
+  color: #b19c76;
+}
+.user-menu > .wallet-address > ul > li > a:active {
+  color: #b19c76;
+}
+.user-menu > .wallet-address:hover > ul {
+  display: block;
+}
+.user-menu > ul {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.user-menu > ul > li > a {
+  display: block;
+  padding: 8px 5px;
+  color: #ccc;
+}
+.user-menu > ul > li > a:hover {
+  color: #b19c76;
+}
+.user-menu > ul > li > a:active {
+  color: #b19c76;
+}
+.pc-menu > ul {
+  display: flex;
+}
+.pc-menu > ul > li {
+  display: flex;
+  float: left;
+  font-weight: 600;
+}
+.pc-menu > ul > li > a {
+  cursor: pointer;
+  padding: 8px 12px 8px 12px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: white;
+}
+.pc-menu > ul > li > a:hover {
+  background-color: rgba(177, 156, 118, 0.5);
+  border-radius: 4px;
+}
+.pc-menu > ul > li > a:active {
+  background-color: rgba(177, 156, 118, 0.7);
+  border-radius: 4px;
+}
+.pc-menu > ul > li > ul {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 100px;
+  display: none;
+  background-color: #222;
+  padding: 10px 0;
+}
+.pc-menu > ul > li > ul > li > a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+.pc-menu > ul > li > ul > li > a:hover {
+  color: #b19c76;
+}
+.pc-menu > ul > li > ul > li > a:active {
+  color: #b19c76;
+}
+.pc-menu > ul > li:hover > ul {
+  display: block;
+}
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  padding: 10px;
+}
+.mobile-menu > ul > li > a {
+  display: block;
+  padding: 12px 5px;
+  font-size: 0.825rem;
+}
+.mobile-menu > ul > li > a:hover {
+  color: #b19c76;
+}
+.mobile-menu > ul > li > a:active {
+  color: #b19c76;
+}
+.mobile-menu > ul > li > ul {
+  margin-left: 10px;
+}
+.mobile-menu > ul > li > ul > li > a {
+  display: block;
+  padding: 8px 5px;
+  color: #ccc;
+}
+.mobile-menu > ul > li > ul > li > a:hover {
+  color: #b19c76;
+}
+.mobile-menu > ul > li > ul > li > a:active {
+  color: #b19c76;
+}
+.mobile-menu > ul > li > ul > li.parent {
+  display: none;
+}
+.mobile-menu > .user-menu {
+  margin: auto;
+  margin-top: 16px;
+}
+.check-holder-view {
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.check-holder-view > header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.check-holder-view > header > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.check-holder-view > header > h2 {
+  font-size: 0.725rem;
+  padding-top: 8px;
+  color: black;
+  font-weight: 300;
+}
+.check-holder-view > article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.check-holder-view > article > img {
+  max-width: 30%;
+  transform-origin: 50% 50%;
+  margin: 2rem;
+}
+@media only screen and (max-width: 719px) {
+  .check-holder-view > article > img {
+    max-width: 50%;
+  }
+}
+.check-holder-view > article > a {
+  width: 50%;
+  cursor: pointer;
+  padding: 8px 12px 9px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  margin-right: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  background-color: rgba(247, 222, 165, 0.8);
+}
+.check-holder-view > article > a:hover {
+  background-color: rgba(247, 222, 165, 0.9);
+  color: black;
+}
+.check-holder-view > article > a:active {
+  background-color: #f7dea5;
+  color: black;
+}
 
