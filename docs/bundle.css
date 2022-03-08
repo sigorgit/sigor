@@ -553,6 +553,7 @@ input {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: 100%;
+  padding-top: 20px;
 }
 .check-holder-view > header {
   display: flex;

@@ -4,7 +4,6 @@ import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
 import DiscordUserInfo from "../DiscordUserInfo";
 import Wallet from "../klaytn/Wallet";
-// import Layout from "./Layout";
 
 export default class CheckHolder implements View {
 
@@ -13,7 +12,6 @@ export default class CheckHolder implements View {
     public discordUser: DiscordUserInfo | undefined;
 
     constructor() {
-        // Layout.current.title = msg("HOME_TITLE");
         BodyNode.append(
             this.container = el(".check-holder-view",
                 el("header",
@@ -23,7 +21,7 @@ export default class CheckHolder implements View {
                 el("article",
                     el("img", { src: "/images/view/check-holder/housedeed.png" }),
                     el("a.discord-login-button", msg("HOLDER_CHECK_BUTTON"), {
-                        href: "https://discord.com/api/oauth2/authorize?client_id=939799459720728606&redirect_uri=https%3A%2F%2Fklu.bs%2Fcheckholder&response_type=code&scope=identify",
+                        href: "https://discord.com/api/oauth2/authorize?client_id=939799459720728606&redirect_uri=https%3A%2F%2Fsigor.com%2Fcheckholder&response_type=code&scope=identify",
                     }),
                 ),
             ));
@@ -35,7 +33,7 @@ export default class CheckHolder implements View {
         let code: string | undefined = new URLSearchParams(window.location.search).get("code")!;
         if (code !== null) {
             try {
-                await superagent.get("https://api.klu.bs/discord/token").query({
+                await superagent.get("https://api.tteok.org/discord/token").query({
                     code,
                     redirect_uri: `${window.location.protocol}//${window.location.host}/checkholder`,
                 });
@@ -49,7 +47,7 @@ export default class CheckHolder implements View {
 
         if (code !== undefined) {
             try {
-                const result = await superagent.get("https://api.klu.bs/discord/me").query({ code });
+                const result = await superagent.get("https://api.tteok.org/discord/me").query({ code });
                 this.discordUser = result.body;
                 this.checkWalletConnected(code);
             } catch (error) {
@@ -69,7 +67,7 @@ export default class CheckHolder implements View {
             const signResult = await Wallet.signMessage(message);
 
             try {
-                const result = await fetch("https://api.klu.bs/checkholder", {
+                const result = await fetch("https://api.tteok.org/checkholder", {
                     method: "POST",
                     body: JSON.stringify({
                         code,
