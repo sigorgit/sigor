@@ -76,7 +76,8 @@ export default class CheckHolder implements View {
                         address,
                     }),
                 });
-                if ((await result.json()).isHolder === true) {
+                const d = await result.json();
+                if (d.ijm === true || d.sigor === true || d.ijc === true) {
                     alert(msg("HOLDER_CHECK_SUCCESS_DESC"));
                 } else {
                     alert(msg("HOLDER_CHECK_FAIL_DESC"));
