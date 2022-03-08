@@ -14,12 +14,14 @@ export default class CheckHolder implements View {
     constructor() {
         BodyNode.append(
             this.container = el(".check-holder-view",
+                el(".overlay"),
                 el("header",
                     el("h1", msg("HOLDER_CHECK_TITLE")),
-                    el("h2", msg("HOLDER_CHECK_DESC"))
+                    el("h2", msg("HOLDER_CHECK_DESC")),
                 ),
                 el("article",
                     el("img", { src: "/images/view/check-holder/housedeed.png" }),
+                    el("p", msg("HOLDER_DESC1")),
                     el("a.discord-login-button", msg("HOLDER_CHECK_BUTTON"), {
                         href: "https://discord.com/api/oauth2/authorize?client_id=939799459720728606&redirect_uri=https%3A%2F%2Fsigor.com%2Fcheckholder&response_type=code&scope=identify",
                     }),
