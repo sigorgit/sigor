@@ -1,6 +1,6 @@
 import { BigNumber, BigNumberish } from "@ethersproject/bignumber";
-import EventContainer from "eventcontainer";
 import QRCode from "qrcode";
+import { EventContainer } from "skydapp-common";
 import KlipQRPopup from "../component/shared/KlipQRPopup";
 import Store from "../Store";
 

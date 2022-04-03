@@ -1,4 +1,4 @@
-import EventContainer from "eventcontainer";
+import { EventContainer } from "skydapp-common";
 import ConnectWalletPopup from "../component/shared/ConnectWalletPopup";
 import ExtWallet from "./ExtWallet";
 import Klip from "./Klip";

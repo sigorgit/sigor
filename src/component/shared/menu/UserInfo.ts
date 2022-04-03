@@ -1,9 +1,7 @@
-import { DomNode, el } from "@hanul/skynode";
-import msg from "msg.js";
+import { DomNode, el, msg } from "skydapp-browser";
 import CommonUtil from "../../../CommonUtil";
 import Klip from "../../../klaytn/Klip";
 import Wallet from "../../../klaytn/Wallet";
-import ViewUtil from "../../../view/ViewUtil";
 
 export default class UserInfo extends DomNode {
 

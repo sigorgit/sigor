@@ -1,6 +1,6 @@
 import Bowser from "bowser";
-import msg from "msg.js";
-import { SkyRouter } from "skyrouter";
+import { msg } from "skydapp-browser";
+import { SkyRouter } from "skydapp-common";
 import Store from "./Store";
 
 class BrowserInfo {

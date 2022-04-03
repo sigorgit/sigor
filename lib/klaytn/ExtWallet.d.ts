@@ -1,4 +1,4 @@
-import EventContainer from "eventcontainer";
+import { EventContainer } from "skydapp-common";
 declare class ExtWallet extends EventContainer {
     private klaytn;
     private caver;

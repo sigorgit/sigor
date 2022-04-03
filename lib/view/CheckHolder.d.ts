@@ -1,4 +1,4 @@
-import { View, ViewParams } from "skyrouter";
+import { View, ViewParams } from "skydapp-common";
 import DiscordUserInfo from "../DiscordUserInfo";
 export default class CheckHolder implements View {
     private container;

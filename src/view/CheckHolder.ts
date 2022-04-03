@@ -1,6 +1,5 @@
-import { BodyNode, DomNode, el } from "@hanul/skynode";
-import msg from "msg.js";
-import { View, ViewParams } from "skyrouter";
+import { BodyNode, DomNode, el, msg } from "skydapp-browser";
+import { View, ViewParams } from "skydapp-common";
 import superagent from "superagent";
 import DiscordUserInfo from "../DiscordUserInfo";
 import Wallet from "../klaytn/Wallet";

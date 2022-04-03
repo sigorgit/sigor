@@ -1,4 +1,4 @@
-import EventContainer from "eventcontainer";
+import { EventContainer } from "skydapp-common";
 declare class Wallet extends EventContainer {
     constructor();
     private checkConnected;
