@@ -4,14 +4,14 @@ import superagent from "superagent";
 import BrowserInfo from "./BrowserInfo";
 import CheckHolder from "./view/CheckHolder";
 import Home from "./view/Home";
-import World from "./view/World";
+import WorldView from "./view/WorldView";
 
 (async () => {
     msg.language = BrowserInfo.language;
     msg.parseCSV((await superagent.get("/msg.csv")).text);
 
     SkyRouter.route("", Home);
-    SkyRouter.route("world", World);
+    SkyRouter.route("world", WorldView);
     SkyRouter.route("checkholder", CheckHolder);
 
     if (sessionStorage.__spa_path) {
