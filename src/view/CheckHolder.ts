@@ -34,7 +34,7 @@ export default class CheckHolder implements View {
         let code: string | undefined = new URLSearchParams(window.location.search).get("code")!;
         if (code !== null) {
             try {
-                await superagent.get("https://api.tteok.org/discord/token").query({
+                await superagent.get("https://api.sigor.com/discord/token").query({
                     code,
                     redirect_uri: `${window.location.protocol}//${window.location.host}/checkholder`,
                 });
@@ -48,7 +48,7 @@ export default class CheckHolder implements View {
 
         if (code !== undefined) {
             try {
-                const result = await superagent.get("https://api.tteok.org/discord/me").query({ code });
+                const result = await superagent.get("https://api.sigor.com/discord/me").query({ code });
                 this.discordUser = result.body;
                 this.checkWalletConnected(code);
             } catch (error) {
@@ -68,7 +68,7 @@ export default class CheckHolder implements View {
             const signResult = await Wallet.signMessage(message);
 
             try {
-                const result = await fetch("https://api.tteok.org/checkholder", {
+                const result = await fetch("https://api.sigor.com/checkholder", {
                     method: "POST",
                     body: JSON.stringify({
                         code,
