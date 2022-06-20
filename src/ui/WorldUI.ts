@@ -14,7 +14,7 @@ export default class WorldUI extends FixedNode {
 
     public repositeUI() {
         if (this.screen !== undefined) {
-            this.loginPopup.move(this.screen.centerX / 30 - 8, this.screen.centerY / 10);
+            this.loginPopup.move(this.screen.centerX / 30 - 32, this.screen.centerY / 10 - 100);
         }
     }
 }

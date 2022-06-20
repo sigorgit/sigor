@@ -9,7 +9,7 @@ export default class World extends GameNode {
         super(0, 0);
         let testMap;
         this.append(
-            testMap = new ImageNode(0, 0, "/images/view/home/bg.jpeg"),
+            testMap = new ImageNode(0, 0, "/images/ui/lpc_home_cup.gif"),
             this.ui = new WorldUI(),
         );
         testMap.scale = 3;

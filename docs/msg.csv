@@ -1,10 +1,4 @@
 key,ko,en
-HOLDER_CHECK_TITLE,시고르 입장권 확인
-HOLDER_CHECK_DESC,시고르에 온 걸 환영해 친구!
-HOLDER_DESC1,시고르 주민 기준: 시고르 집문서 NFT 보유\n인절미 홀더 기준: 인절미 1000개 이상 보유\n인클 홀더 기준: 인클 1000개 이상 보유
-HOLDER_CHECK_BUTTON,디스코드 로그인허기!
-HOLDER_CHECK_SUCCESS_DESC,홀더 인증 성공했어!
-HOLDER_CHECK_FAIL_DESC,홀더 인증 실패했어...
 KLIP_POPUP_TITLE,QR 코드로 Klip 접속,Connect Klip via QR code
 KLIP_POPUP_DESC1,QR 코드 리더기 또는 카카오톡 앱을 통해 QR 코드를 스캔해주세요.,Please scan the QR code through a QR Code Reader or Kakao Talk Application
 KLIP_POPUP_DESC2,카카오톡 실행 ▶ 상단 검색창 클릭 ▶ 코드 스캔 후 로그인,Run Kakao Talk Application ▶ Click the search bar on the top ▶ Scan the code to log in
