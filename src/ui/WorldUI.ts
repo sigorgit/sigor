@@ -1,20 +1,15 @@
 import { FixedNode } from "skydapp-browser";
-import LoginPopup from "./LoginPopup";
+import WorldManager from "../WorldManager";
 
 export default class WorldUI extends FixedNode {
 
-    private loginPopup: LoginPopup;
-
     constructor() {
         super(0, 0);
-        this.append(
-            this.loginPopup = new LoginPopup(),
-        );
+        console.log(WorldManager.discordUser);
     }
 
     public repositeUI() {
         if (this.screen !== undefined) {
-            this.loginPopup.move(this.screen.centerX / 30 - 32, this.screen.centerY / 10 - 100);
         }
     }
 }

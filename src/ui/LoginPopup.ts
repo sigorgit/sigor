@@ -1,6 +1,8 @@
-import { DomNode, el, FixedNode, msg } from "skydapp-browser";
+import { DomNode, el, FixedNode } from "skydapp-browser";
+import Config from "../Config";
 
 export default class LoginPopup extends FixedNode {
+
     public width = 520;
     public height = 300;
 
@@ -12,7 +14,9 @@ export default class LoginPopup extends FixedNode {
                 el("p", "우리들의 농촌 메타버스"),
             ),
             el("article",
-                el("a", "시고르에 입장하기"),
+                el("a", "디스코드 로그인", {
+                    href: `https://discord.com/api/oauth2/authorize?client_id=${Config.applicationId}&redirect_uri=${encodeURIComponent(`${window.location.protocol}//${window.location.host}`)}&response_type=code&scope=identify`,
+                }),
             ),
         );
         this.init(this.dom);

@@ -1,1 +1,1 @@
-{"version":3,"file":"WorldManager.d.ts","sourceRoot":"","sources":["../src/WorldManager.ts"],"names":[],"mappings":"AAAA,cAAM,YAAY;CAEjB;;AAED,wBAAkC"}
+{"version":3,"file":"WorldManager.d.ts","sourceRoot":"","sources":["../src/WorldManager.ts"],"names":[],"mappings":"AAAA,OAAO,eAAe,MAAM,mBAAmB,CAAC;AAEhD,cAAM,YAAY;IACP,WAAW,EAAE,eAAe,GAAG,SAAS,CAAC;CACnD;;AAED,wBAAkC"}
