@@ -1,5 +1,7 @@
-import DiscordUserInfo from "./DiscordUserInfo";
+import { Fullscreen } from "skydapp-browser";
+import DiscordUserInfo from "./datamodel/DiscordUserInfo";
 declare class WorldManager {
+    screen: Fullscreen;
     discordUser: DiscordUserInfo | undefined;
 }
 declare const _default: WorldManager;

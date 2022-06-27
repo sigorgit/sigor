@@ -1,4 +1,4 @@
-import { Fullscreen, Store } from "skydapp-browser";
+import { Store } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
 import Config from "../Config";
 import World from "../gamenode/World";
@@ -8,13 +8,10 @@ export default class WorldView implements View {
 
     private codeStore = new Store("codeStore");
 
-    public screen: Fullscreen;
     public world: World;
 
     constructor() {
-
-        this.screen = new Fullscreen();
-        this.screen.root.append(
+        WorldManager.screen.root.append(
             this.world = new World(),
         );
 
@@ -70,7 +67,7 @@ export default class WorldView implements View {
     public changeParams(params: ViewParams, uri: string): void { }
 
     public close(): void {
-        this.screen.delete();
+        this.world.delete();
         window.removeEventListener("resize", this.repositeUI);
     }
 }

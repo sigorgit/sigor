@@ -1,1 +1,1 @@
-{"version":3,"file":"WorldManager.js","sourceRoot":"","sources":["../src/WorldManager.ts"],"names":[],"mappings":";;AAEA,MAAM,YAAY;CAEjB;AAED,kBAAe,IAAI,YAAY,EAAE,CAAC"}
+{"version":3,"file":"WorldManager.js","sourceRoot":"","sources":["../src/WorldManager.ts"],"names":[],"mappings":";;AAAA,qDAA6C;AAG7C,MAAM,YAAY;IAAlB;QAEW,WAAM,GAAe,IAAI,4BAAU,EAAE,CAAC;IAEjD,CAAC;CAAA;AAED,kBAAe,IAAI,YAAY,EAAE,CAAC"}

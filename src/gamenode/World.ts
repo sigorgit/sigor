@@ -34,6 +34,7 @@ export default class World extends GameNode {
         this.loginPopup?.delete();
         this.ui?.delete();
         this.append(this.ui = new WorldUI());
+        this.ui.repositeUI();
     }
 
     public showLoginPopup() {
