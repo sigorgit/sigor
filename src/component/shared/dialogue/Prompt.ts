@@ -1,4 +1,4 @@
-import { DomNode, el, msg, Popup } from "skydapp-browser";
+import { DomNode, el, Popup } from "skydapp-browser";
 
 export default class Prompt extends Popup {
 
@@ -10,21 +10,23 @@ export default class Prompt extends Popup {
         message: string,
         confirmTitle: string,
         confirm: (value: string) => void,
-        placeholder?: string,
     ) {
         super(".popup-background");
         this.append(
             this.content = el(".dialogue.prompt",
-                el("h2", title),
+                el(".close-container", { click: () => this.delete(), },
+                    el("img", { src: "/images/icn/close.svg", alt: "close" }),
+                ),
+                el("h6", title),
                 el("p", message),
                 el(".input-container",
-                    this.input = el("input", { placeholder: placeholder }),
+                    this.input = el("input"),
                 ),
                 el(".button-container",
-                    el("button", msg("CANCEL_BUTTON"), {
+                    el("button.left", "취소", {
                         click: () => this.delete(),
                     }),
-                    el("button", confirmTitle, {
+                    el("button.right", confirmTitle, {
                         click: () => {
                             confirm(this.input.domElement.value);
                             this.delete();

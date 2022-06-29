@@ -1,21 +1,22 @@
-import { DomNode, el, msg, Popup } from "skydapp-browser";
+import { DomNode, el, Popup } from "skydapp-browser";
 
 export default class Alert extends Popup {
 
     public content: DomNode;
 
     constructor(
-        title: string,
         message: string,
         confirmTitle?: string,
     ) {
         super(".popup-background");
         this.append(
             this.content = el(".dialogue.alert",
-                el("h2", title),
+                el(".close-container", { click: () => this.delete(), },
+                    el("img", { src: "/images/icn/close.svg", alt: "close" }),
+                ),
                 el("p", message),
                 el(".button-container",
-                    el("button", confirmTitle === undefined ? msg("CONFIRM_BUTTON") : confirmTitle, {
+                    el("button", confirmTitle === undefined ? "확인" : confirmTitle, {
                         click: () => this.delete(),
                     }),
                 ),

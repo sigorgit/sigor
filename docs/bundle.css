@@ -173,103 +173,152 @@ input {
 }
 .dialogue.alert {
   position: relative;
-  max-width: 600px;
-  width: 90%;
+  max-width: 440px;
+  width: 100%;
   margin: auto;
-  border-radius: 4px;
-  background-color: black;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #000;
+  border: 1px solid #3C3C3C;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: "ChosunGs";
 }
-.dialogue.alert > h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  padding: 16px;
+.dialogue.alert > h6 {
+  color: #fff;
+  padding: 0px 0px 0px 50px;
 }
-.dialogue.alert > p {
-  padding: 0px 16px 8px 16px;
-  font-size: 0.875rem;
-  line-height: 1.2em;
-}
-.dialogue.alert > .button-container {
+.dialogue.alert > .close-container {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 16px;
+  padding: 27px;
+  padding-bottom: 13px;
+  cursor: pointer;
+}
+.dialogue.alert > p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding: 0px 50px 50px 50px;
+}
+.dialogue.alert > .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 .dialogue.alert > .button-container > button {
-  background-color: transparent;
-  color: white;
-  padding: 8px 16px;
-  font-size: 0.75rem;
-  border-radius: 4px;
+  font-family: "ChosunGs";
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding: 12px 0px;
+  color: #000;
+  background-color: #b19c76;
+  border-radius: 0px 0px 8px 8px;
 }
 .dialogue.alert > .button-container > button:hover {
   background-color: rgba(177, 156, 118, 0.8);
 }
-.dialogue.alert > .button-container > button:active {
-  background-color: #b19c76;
-}
 .dialogue.confirm {
   position: relative;
-  max-width: 600px;
-  width: 90%;
+  max-width: 440px;
+  width: 100%;
   margin: auto;
-  border-radius: 4px;
-  background-color: black;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #000;
+  border: 1px solid #3C3C3C;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "ChosunGs";
+  color: #fff;
 }
-.dialogue.confirm > h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  padding: 16px;
-}
-.dialogue.confirm > p {
-  padding: 0px 16px 8px 16px;
-  font-size: 0.875rem;
-  line-height: 1.2em;
-}
-.dialogue.confirm > .button-container {
+.dialogue.confirm > .close-container {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 16px;
+  padding: 27px;
+  padding-bottom: 13px;
+  cursor: pointer;
+}
+.dialogue.confirm > h6 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.dialogue.confirm > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding: 0px 50px 50px 50px;
+}
+.dialogue.confirm > .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 .dialogue.confirm > .button-container > button {
-  background-color: transparent;
-  color: white;
-  padding: 8px 16px;
-  font-size: 0.75rem;
-  border-radius: 4px;
+  font-family: "ChosunGs";
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding: 12px 0px;
+  color: #161616;
+  border-radius: 0px 0px 8px 8px;
 }
-.dialogue.confirm > .button-container > button:hover {
-  background-color: rgba(177, 156, 118, 0.8);
+.dialogue.confirm > .button-container > .cancel {
+  border: 1px solid #b19c76;
+  color: #fff;
+  background: #1D1D1D;
+  border-radius: 0px 0px 0px 8px;
 }
-.dialogue.confirm > .button-container > button:active {
+.dialogue.confirm > .button-container > .ok {
+  border-radius: 0px 0px 8px 0px;
   background-color: #b19c76;
+}
+.dialogue.confirm > .button-container > .ok:hover {
+  background-color: rgba(177, 156, 118, 0.8);
 }
 .dialogue.prompt {
   position: relative;
-  max-width: 600px;
-  width: 90%;
+  max-width: 440px;
+  width: 100%;
   margin: auto;
-  border-radius: 4px;
-  background-color: black;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #161616;
+  border: 1px solid #3C3C3C;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: "ChosunGs";
+  color: #fff;
 }
-.dialogue.prompt > h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  padding: 16px;
+.dialogue.prompt > .close-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 27px;
+  padding-bottom: 13px;
+  cursor: pointer;
+}
+.dialogue.prompt > h6 {
+  font-size: 24px;
+  padding: 0px 0px 0px 20px;
+  margin-bottom: 16px;
 }
 .dialogue.prompt > p {
-  padding: 0px 16px 8px 16px;
-  font-size: 0.875rem;
-  line-height: 1.2em;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding: 0px 20px 0px 20px;
 }
 .dialogue.prompt > .input-container {
+  display: flex;
+  justify-content: center;
   margin-top: 8px;
-  padding: 0 16px;
+  padding: 16px 0px;
 }
 .dialogue.prompt > .input-container > input {
   width: 100%;
+  max-width: 398px;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 8px;
@@ -279,28 +328,37 @@ input {
   color: white;
 }
 .dialogue.prompt > .input-container > input:hover {
-  border: 1px solid #b19c76;
+  border: 1px solid #F3C754;
 }
 .dialogue.prompt > .input-container > input:focus {
-  border: 1px solid #b19c76;
+  border: 1px solid #F3C754;
 }
 .dialogue.prompt > .button-container {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 16px;
 }
 .dialogue.prompt > .button-container > button {
-  background-color: transparent;
-  color: white;
-  padding: 8px 16px;
-  font-size: 0.75rem;
-  border-radius: 4px;
+  font-family: "ChosunGs";
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  padding: 12px 0px;
+  color: #161616;
 }
 .dialogue.prompt > .button-container > button:hover {
-  background-color: rgba(177, 156, 118, 0.8);
+  background: white;
 }
-.dialogue.prompt > .button-container > button:active {
+.dialogue.prompt > .button-container > .left {
+  border-radius: 0px 0px 0px 8px;
+}
+.dialogue.prompt > .button-container > .right {
+  border-radius: 0px 0px 8px 0px;
   background-color: #b19c76;
+}
+.dialogue.prompt > .button-container > .right:hover {
+  background-color: rgba(177, 156, 118, 0.8);
 }
 .connect-wallet-popup {
   position: relative;
