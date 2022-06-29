@@ -1,6 +1,6 @@
 import { GameNode, ImageNode, WebSocketClient } from "skydapp-browser";
 import Config from "../Config";
-import LoginPopup from "../ui/LoginPopup";
+import LoginPopup from "../ui/popup/LoginPopup";
 import WorldUI from "../ui/WorldUI";
 
 export default class World extends GameNode {
