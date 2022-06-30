@@ -1,10 +1,7 @@
-import { DomNode, el, FixedNode } from "skydapp-browser";
+import { el, FixedNode } from "skydapp-browser";
 import Config from "../../Config";
 
 export default class LoginPopup extends FixedNode {
-
-    public width = 520;
-    public height = 300;
 
     constructor() {
         super(0, 0);
@@ -19,14 +16,5 @@ export default class LoginPopup extends FixedNode {
                 }),
             ),
         );
-        this.init(this.dom);
-    }
-
-    public init(dom: DomNode) {
-        if (screen.width < 500) {
-            dom.style({ width: this.width / 1.5, height: this.height / 1.3 });
-        } else {
-            dom.style({ width: this.width, height: this.height });
-        }
     }
 }

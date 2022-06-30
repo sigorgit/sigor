@@ -1,8 +1,8 @@
 import { Fullscreen } from "skydapp-browser";
-import DiscordUserInfo from "./datamodel/DiscordUserInfo";
+import SigorClient from "./realtime/SigorClient";
 declare class WorldManager {
     screen: Fullscreen;
-    discordUser: DiscordUserInfo | undefined;
+    client: SigorClient;
 }
 declare const _default: WorldManager;
 export default _default;

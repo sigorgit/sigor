@@ -1,11 +1,11 @@
 import { FixedNode } from "skydapp-browser";
-import WorldManager from "../WorldManager";
+import SigorManager from "../SigorManager";
 
 export default class WorldUI extends FixedNode {
 
     constructor() {
         super(0, 0);
-        console.log(WorldManager.discordUser);
+        console.log(SigorManager.discordUser);
     }
 
     public repositeUI() {

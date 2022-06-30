@@ -1,10 +1,7 @@
 import { View, ViewParams } from "skydapp-common";
-import World from "../gamenode/World";
 export default class WorldView implements View {
-    private codeStore;
-    world: World;
+    private world;
     constructor();
-    private repositeUI;
     private checkDiscordLogin;
     changeParams(params: ViewParams, uri: string): void;
     close(): void;

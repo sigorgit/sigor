@@ -1,11 +1,9 @@
 import { GameNode } from "skydapp-browser";
-import WorldUI from "../ui/WorldUI";
 export default class World extends GameNode {
-    private client;
     private loginPopup;
-    ui: WorldUI | undefined;
+    private ui;
     constructor();
-    showWorldUI(): void;
     showLoginPopup(): void;
+    showWorldUI(): void;
 }
 //# sourceMappingURL=World.d.ts.map
