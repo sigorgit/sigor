@@ -67,6 +67,7 @@
   "exclude": [
     "lib",
     "old",
+    "old2",
     "test-src",
     "node_modules",
     ".vscode"

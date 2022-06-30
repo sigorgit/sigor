@@ -1,0 +1,1 @@
+{"version":3,"file":"WorldView.d.ts","sourceRoot":"","sources":["../../../old2/view/WorldView.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,gBAAgB,CAAC;AAIlD,MAAM,CAAC,OAAO,OAAO,SAAU,YAAW,IAAI;IAE1C,OAAO,CAAC,KAAK,CAAQ;;YASP,iBAAiB;IAQxB,YAAY,CAAC,MAAM,EAAE,UAAU,EAAE,GAAG,EAAE,MAAM,GAAG,IAAI;IAEnD,KAAK,IAAI,IAAI;CAGvB"}

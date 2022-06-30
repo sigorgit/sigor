@@ -1,0 +1,1 @@
+{"version":3,"file":"Alert.d.ts","sourceRoot":"","sources":["../../../../old2/ui/dialogue/Alert.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,KAAK,EAAE,MAAM,iBAAiB,CAAC;AAErD,MAAM,CAAC,OAAO,OAAO,KAAM,SAAQ,KAAK;IAE7B,OAAO,EAAE,OAAO,CAAC;gBAGpB,OAAO,EAAE,MAAM,EACf,YAAY,CAAC,EAAE,MAAM;CAiB5B"}
