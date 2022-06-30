@@ -1,5 +1,5 @@
 import { el, GameNode } from "skydapp-browser";
-import AvatarImage from "../datamodel/AvatarImage";
+import AvatarImage, { Direction2DAreas } from "../datamodel/AvatarImage";
 import Sigor from "../Sigor";
 import MessageBalloon from "./MessageBalloon";
 
@@ -24,7 +24,21 @@ export default class Avatar extends GameNode {
         avatarImage: AvatarImage,
     }) {
         super(info.x, info.y);
-        console.log(info);
+
+        // 세트 이미지로 구성된 캐릭터
+        if ((info.avatarImage as any).set_image !== undefined) {
+            const image: {
+                set_image: string,
+                scale?: number,
+                stand?: Direction2DAreas,
+                walk?: Direction2DAreas,
+                run?: Direction2DAreas,
+                attack?: Direction2DAreas,
+                attacked?: Direction2DAreas,
+            } = info.avatarImage as any;
+            console.log(image);
+        }
+
         this.dom = el(".avatar-username", info.username);
 
         if (this.id === Sigor.currentUser) {

@@ -8,7 +8,7 @@ interface Area {
     center_x: number;
     center_y: number;
 }
-interface Direction2DAreas {
+export interface Direction2DAreas {
     top?: Area;
     bottom?: Area;
     left?: Area;
