@@ -1,0 +1,1 @@
+{"version":3,"file":"MessageBalloon.d.ts","sourceRoot":"","sources":["../../src/gamenode/MessageBalloon.ts"],"names":[],"mappings":"AAAA,OAAO,EAAsB,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAE/D,MAAM,CAAC,OAAO,OAAO,cAAe,SAAQ,QAAQ;IAEhD,OAAO,CAAC,YAAY,CAAU;IAC9B,OAAO,CAAC,OAAO,CAAU;IACzB,OAAO,CAAC,KAAK,CAAoB;gBAErB,CAAC,EAAE,MAAM;IAkCd,aAAa,CAAC,OAAO,EAAE,MAAM;CAYvC"}

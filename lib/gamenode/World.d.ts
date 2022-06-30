@@ -1,9 +1,10 @@
 import { GameNode } from "skydapp-browser";
 import AvatarImage from "../datamodel/AvatarImage";
+import Map from "./Map";
 export default class World extends GameNode {
     private loginPopup;
     private ui;
-    private map;
+    map: Map | undefined;
     constructor();
     private init;
     createMap(channelInfo: {

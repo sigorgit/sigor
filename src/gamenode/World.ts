@@ -9,7 +9,7 @@ export default class World extends GameNode {
 
     private loginPopup: LoginPopup | undefined;
     private ui: WorldUI | undefined;
-    private map: Map | undefined;
+    public map: Map | undefined;
 
     constructor() {
         super(0, 0);

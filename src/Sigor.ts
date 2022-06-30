@@ -9,7 +9,7 @@ import ReconnectingPopup from "./popup/ReconnectingPopup";
 class Sigor {
     private codeStore = new Store("codeStore");
 
-    private screen: Fullscreen = new Fullscreen();
+    public screen: Fullscreen = new Fullscreen();
     private client = new WebSocketClient(`wss://${Config.backendHost}`);
 
     private firstConnectingPopup: FirstConnectingPopup | undefined = new FirstConnectingPopup().appendTo(this.screen.root);
@@ -18,6 +18,10 @@ class Sigor {
 
     public currentChannel = "yard";
     public currentUserInfo: UserInfo | undefined;
+
+    public get currentUser() {
+        return this.currentUserInfo === undefined ? undefined : `${this.currentUserInfo.platform}-${this.currentUserInfo.userId}`;
+    }
 
     public start() {
 
@@ -69,6 +73,10 @@ class Sigor {
         if (code !== undefined) {
             try {
                 this.currentUserInfo = await this.client.send("discord-login", code);
+                const avatar = this.world?.map?.avatars[this.currentUser!];
+                if (avatar !== undefined) {
+                    this.screen.camera.target = avatar;
+                }
                 return true;
             } catch (error) {
                 console.error(error);
@@ -110,23 +118,29 @@ class Sigor {
         toY: number | undefined,
         avatarImage: AvatarImage,
     }) => {
-        console.log("createAvatar", info);
+        this.world?.map?.createAvatar(info);
     };
 
     private chatHandler = (who: string, message: string) => {
-        console.log(who, message);
+        this.world?.map?.avatars[who]?.showMessage(message);
     };
 
     private moveToHandler = (who: string, x: number, y: number) => {
-        console.log(who, x, y);
+        this.world?.map?.avatars[who]?.moveTo(x, y);
     };
 
     public async chat(message: string) {
         this.client.send(`${this.currentChannel}/chat`, message);
+        if (this.currentUser !== undefined) {
+            this.chatHandler(this.currentUser, message);
+        }
     }
 
     public async moveTo(x: number, y: number) {
         this.client.send(`${this.currentChannel}/moveTo`, x, y);
+        if (this.currentUser !== undefined) {
+            this.moveToHandler(this.currentUser, x, y);
+        }
     }
 }
 

@@ -1,7 +1,10 @@
 import { GameNode } from "skydapp-browser";
 import AvatarImage from "../datamodel/AvatarImage";
+import Avatar from "./Avatar";
 export default class Map extends GameNode {
-    private avatars;
+    avatars: {
+        [id: string]: Avatar;
+    };
     constructor(channelInfo: {
         channelName: string;
         avatars: {

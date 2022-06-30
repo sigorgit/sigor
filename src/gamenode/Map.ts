@@ -5,7 +5,7 @@ import Avatar from "./Avatar";
 
 export default class Map extends GameNode {
 
-    private avatars: { [id: string]: Avatar } = {};
+    public avatars: { [id: string]: Avatar } = {};
 
     constructor(channelInfo: {
         channelName: string,
