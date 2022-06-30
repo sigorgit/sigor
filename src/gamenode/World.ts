@@ -1,5 +1,5 @@
 import { GameNode } from "skydapp-browser";
-import AvatarImage from "../datamodel/AvatarImage";
+import Character2D from "../datamodel/Character2D";
 import LoginPopup from "../popup/LoginPopup";
 import Sigor from "../Sigor";
 import WorldUI from "../ui/WorldUI";
@@ -39,7 +39,7 @@ export default class World extends GameNode {
             y: number,
             toX: number | undefined,
             toY: number | undefined,
-            avatarImage: AvatarImage,
+            avatarImage: Character2D,
         }[],
     }) {
         this.append(this.map = new Map(channelInfo));

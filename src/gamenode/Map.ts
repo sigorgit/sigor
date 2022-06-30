@@ -1,5 +1,5 @@
 import { GameNode, ImageNode, Rect } from "skydapp-browser";
-import AvatarImage from "../datamodel/AvatarImage";
+import Character2D from "../datamodel/Character2D";
 import Sigor from "../Sigor";
 import Avatar from "./Avatar";
 
@@ -17,7 +17,7 @@ export default class Map extends GameNode {
             y: number,
             toX: number | undefined,
             toY: number | undefined,
-            avatarImage: AvatarImage,
+            avatarImage: Character2D,
         }[],
     }) {
         super(0, 0);
@@ -43,7 +43,7 @@ export default class Map extends GameNode {
         y: number,
         toX: number | undefined,
         toY: number | undefined,
-        avatarImage: AvatarImage,
+        avatarImage: Character2D,
     }) {
         const avatar = new Avatar(avatarInfo).appendTo(this);
         avatar.on("delete", () => {

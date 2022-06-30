@@ -1,5 +1,5 @@
 import { GameNode } from "skydapp-browser";
-import AvatarImage from "../datamodel/AvatarImage";
+import Character2D from "../datamodel/Character2D";
 import Map from "./Map";
 export default class World extends GameNode {
     private loginPopup;
@@ -17,7 +17,7 @@ export default class World extends GameNode {
             y: number;
             toX: number | undefined;
             toY: number | undefined;
-            avatarImage: AvatarImage;
+            avatarImage: Character2D;
         }[];
     }): void;
 }

@@ -11,12 +11,13 @@ export interface Sprite {
     center_y?: number;
 }
 export interface DirectionSprites {
+    set_image?: string;
     top?: Sprite;
     bottom?: Sprite;
     left?: Sprite;
     right?: Sprite;
 }
-export default interface AvatarImage {
+export default interface Character2D {
     set_image?: string;
     scale?: number;
     stand?: DirectionSprites;
@@ -25,4 +26,4 @@ export default interface AvatarImage {
     attack?: DirectionSprites;
     attacked?: DirectionSprites;
 }
-//# sourceMappingURL=AvatarImage.d.ts.map
+//# sourceMappingURL=Character2D.d.ts.map

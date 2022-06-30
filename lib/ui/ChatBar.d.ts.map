@@ -1,1 +1,1 @@
-{"version":3,"file":"ChatBar.d.ts","sourceRoot":"","sources":["../../src/ui/ChatBar.ts"],"names":[],"mappings":"AAAA,OAAO,EAAe,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAGxD,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,QAAQ;IAEzC,OAAO,CAAC,KAAK,CAA4B;;IAkBzC,OAAO,CAAC,YAAY,CAIlB;IAEF,OAAO,CAAC,IAAI;IAQL,MAAM;CAIhB"}
+{"version":3,"file":"ChatBar.d.ts","sourceRoot":"","sources":["../../src/ui/ChatBar.ts"],"names":[],"mappings":"AAAA,OAAO,EAAe,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAGxD,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,QAAQ;IAEzC,OAAO,CAAC,KAAK,CAA4B;;IAmBzC,OAAO,CAAC,YAAY,CAIlB;IAEF,OAAO,CAAC,IAAI;IAQL,MAAM;CAIhB"}

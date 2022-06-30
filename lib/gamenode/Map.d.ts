@@ -1,5 +1,5 @@
 import { GameNode } from "skydapp-browser";
-import AvatarImage from "../datamodel/AvatarImage";
+import Character2D from "../datamodel/Character2D";
 import Avatar from "./Avatar";
 export default class Map extends GameNode {
     avatars: {
@@ -15,7 +15,7 @@ export default class Map extends GameNode {
             y: number;
             toX: number | undefined;
             toY: number | undefined;
-            avatarImage: AvatarImage;
+            avatarImage: Character2D;
         }[];
     });
     createAvatar(avatarInfo: {
@@ -26,7 +26,7 @@ export default class Map extends GameNode {
         y: number;
         toX: number | undefined;
         toY: number | undefined;
-        avatarImage: AvatarImage;
+        avatarImage: Character2D;
     }): void;
     removeAvatar(avatarId: string): void;
 }

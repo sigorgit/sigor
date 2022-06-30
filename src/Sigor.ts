@@ -1,6 +1,6 @@
 import { Fullscreen, Store, WebSocketClient } from "skydapp-browser";
 import Config from "./Config";
-import AvatarImage from "./datamodel/AvatarImage";
+import Character2D from "./datamodel/Character2D";
 import UserInfo from "./datamodel/UserInfo";
 import World from "./gamenode/World";
 import FirstConnectingPopup from "./popup/FirstConnectingPopup";
@@ -120,7 +120,7 @@ class Sigor {
         y: number,
         toX: number | undefined,
         toY: number | undefined,
-        avatarImage: AvatarImage,
+        avatarImage: Character2D,
     }) => {
         this.world?.map?.createAvatar(info);
     };
