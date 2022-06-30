@@ -1,5 +1,5 @@
 import { FixedNode } from "skydapp-browser";
-import ChatBar from "./worldui/ChatBar";
+import ChatBar from "./ChatBar";
 
 export default class WorldUI extends FixedNode {
 

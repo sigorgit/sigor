@@ -25,7 +25,7 @@ export default class Avatar extends GameNode {
     }) {
         super(info.x, info.y);
         console.log(info);
-        this.dom = el("", info.username);
+        this.dom = el(".avatar-username", info.username);
 
         if (this.id === Sigor.currentUser) {
             Sigor.screen.camera.target = this;

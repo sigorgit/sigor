@@ -1,4 +1,4 @@
-import { el, GameNode, Rect } from "skydapp-browser";
+import { GameNode, ImageNode, Rect } from "skydapp-browser";
 import AvatarImage from "../datamodel/AvatarImage";
 import Sigor from "../Sigor";
 import Avatar from "./Avatar";
@@ -21,9 +21,11 @@ export default class Map extends GameNode {
         }[],
     }) {
         super(0, 0);
+        this.append(
+            new ImageNode(0, 0, "/res/sample-map.png"),
+        );
         this.addTouchArea(new Rect(0, 0, 999999, 999999));
 
-        this.dom = el("", channelInfo.channelName);
         for (const avatarInfo of channelInfo.avatars) {
             this.createAvatar(avatarInfo);
         }

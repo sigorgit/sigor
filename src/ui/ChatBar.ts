@@ -1,5 +1,5 @@
 import { DomNode, el, GameNode } from "skydapp-browser";
-import Sigor from "../../Sigor";
+import Sigor from "../Sigor";
 
 export default class ChatBar extends GameNode {
 
