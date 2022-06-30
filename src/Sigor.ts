@@ -10,7 +10,7 @@ class Sigor {
     private codeStore = new Store("codeStore");
 
     public screen: Fullscreen = new Fullscreen();
-    private client = new WebSocketClient(`wss://${Config.backendHost}`);
+    private client!: WebSocketClient;
 
     private firstConnectingPopup: FirstConnectingPopup | undefined = new FirstConnectingPopup().appendTo(this.screen.root);
     private world: World | undefined;
@@ -24,6 +24,8 @@ class Sigor {
     }
 
     public start() {
+
+        this.client = new WebSocketClient(`wss://${Config.backendHost}`);
 
         this.client.on("connect", () => {
             console.log("connected to server.");
@@ -96,6 +98,7 @@ class Sigor {
         this.currentChannel = channelName;
         const channelInfo = await this.client.send("enter-channel", channelName);
         this.client.on(`${this.currentChannel}/createAvatar`, this.createAvatarHandler);
+        this.client.on(`${this.currentChannel}/removeAvatar`, this.removeAvatarHandler);
         this.client.on(`${this.currentChannel}/chat`, this.chatHandler);
         this.client.on(`${this.currentChannel}/moveTo`, this.moveToHandler);
         this.world?.createMap(channelInfo);
@@ -103,6 +106,7 @@ class Sigor {
 
     public async exitChannel() {
         this.client.off(`${this.currentChannel}/createAvatar`, this.createAvatarHandler);
+        this.client.off(`${this.currentChannel}/removeAvatar`, this.removeAvatarHandler);
         this.client.off(`${this.currentChannel}/chat`, this.chatHandler);
         this.client.off(`${this.currentChannel}/moveTo`, this.moveToHandler);
         await this.client.send("exit-channel");
@@ -119,6 +123,10 @@ class Sigor {
         avatarImage: AvatarImage,
     }) => {
         this.world?.map?.createAvatar(info);
+    };
+
+    private removeAvatarHandler = (avatarId: string) => {
+        this.world?.map?.removeAvatar(avatarId);
     };
 
     private chatHandler = (who: string, message: string) => {

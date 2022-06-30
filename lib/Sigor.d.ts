@@ -15,6 +15,7 @@ declare class Sigor {
     enterChannel(channelName: string): Promise<void>;
     exitChannel(): Promise<void>;
     private createAvatarHandler;
+    private removeAvatarHandler;
     private chatHandler;
     private moveToHandler;
     chat(message: string): Promise<void>;

@@ -46,6 +46,13 @@ export default class Map extends GameNode {
         avatarImage: AvatarImage,
     }) {
         const avatar = new Avatar(avatarInfo).appendTo(this);
+        avatar.on("delete", () => {
+            delete this.avatars[avatar.id];
+        });
         this.avatars[avatar.id] = avatar;
+    }
+
+    public removeAvatar(avatarId: string) {
+        this.avatars[avatarId]?.delete();
     }
 }

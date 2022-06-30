@@ -28,5 +28,6 @@ export default class Map extends GameNode {
         toY: number | undefined;
         avatarImage: AvatarImage;
     }): void;
+    removeAvatar(avatarId: string): void;
 }
 //# sourceMappingURL=Map.d.ts.map
