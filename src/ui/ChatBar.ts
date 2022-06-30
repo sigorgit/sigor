@@ -9,12 +9,13 @@ export default class ChatBar extends GameNode {
         super(0, 0);
         this.centerY = 45;
         this.dom = el(".chat-bar",
-            this.input =el("input", {
+            this.input = el("input", {
                 keyup: (event: KeyboardEvent) => {
                     if (event.key === "Enter") {
                         this.chat();
                     }
                 },
+                placeholder: "메시지 보내기"
             }),
         );
 

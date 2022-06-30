@@ -5263,10 +5263,10 @@
     "once" "^1.3.1"
     "simple-concat" "^1.0.0"
 
-"skydapp-browser@^0.0.3":
-  "integrity" "sha512-/MqyNR6B2Kyfhyh+WN6UrI+v4d1ERFoiyDUnAODA1Mo2uALd+xuBGRR5iAGg7ehh5KRwMFXR6rV6xTDD3KCMsA=="
-  "resolved" "https://registry.npmjs.org/skydapp-browser/-/skydapp-browser-0.0.3.tgz"
-  "version" "0.0.3"
+"skydapp-browser@^0.0.4":
+  "integrity" "sha512-9lKXE6pce3jBasBUn7P8dGiSKVJXk/iqqNyuswe3b+9zZbgWAp1WfQI7PO3l3hhIqentZTJE2qzKGHWdE6787g=="
+  "resolved" "https://registry.npmjs.org/skydapp-browser/-/skydapp-browser-0.0.4.tgz"
+  "version" "0.0.4"
   dependencies:
     "@types/papaparse" "^5.2.4"
     "bowser" "^2.11.0"
