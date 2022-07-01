@@ -76,6 +76,7 @@ export default class Avatar extends GameNode {
         avatarImage: Character2D,
     }) {
         super(info.x, info.y);
+        this.yToZ = true;
         this.statesNode = new StatesNode<StatesNode>(0, 0).appendTo(this);
 
         if (info.avatarImage.scale !== undefined) {
@@ -149,7 +150,6 @@ export default class Avatar extends GameNode {
         if (this.messageBalloon !== undefined) {
             this.messageBalloon.updateMessage(message);
         } else {
-            console.log(this.height);
             this.messageBalloon = new MessageBalloon(-this.height * this.statesNode.scale).appendTo(this);
             this.messageBalloon.updateMessage(message);
             this.messageBalloon.on("delete", () => this.messageBalloon = undefined);
