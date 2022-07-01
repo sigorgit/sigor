@@ -3,13 +3,13 @@ import Character2D from "../datamodel/Character2D";
 import LoginPopup from "../popup/LoginPopup";
 import Sigor from "../Sigor";
 import WorldUI from "../ui/WorldUI";
-import Map from "./Map";
+import Channel from "./Channel";
 
 export default class World extends GameNode {
 
     private loginPopup: LoginPopup | undefined;
     private ui: WorldUI | undefined;
-    public map: Map | undefined;
+    public map: Channel | undefined;
 
     constructor() {
         super(0, 0);
@@ -42,7 +42,7 @@ export default class World extends GameNode {
             avatarImage: Character2D,
         }[],
     }) {
-        this.append(this.map = new Map(channelInfo));
+        this.append(this.map = new Channel(channelInfo));
         this.map.on("delete", () => this.map = undefined);
     }
 }
