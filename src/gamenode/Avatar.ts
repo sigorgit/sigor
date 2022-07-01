@@ -45,7 +45,7 @@ export default class Avatar extends GameNode {
                 }
 
                 // shadow
-                const shadow = new CircleNode(0, 0, width, width / 2, 0x000000).appendTo(this);
+                const shadow = new CircleNode(0, 0, width * this.statesNode.scale, width * this.statesNode.scale / 2, 0x000000).appendTo(this);
                 shadow.alpha = 0.05;
                 this.statesNode.z = 1;
             });
