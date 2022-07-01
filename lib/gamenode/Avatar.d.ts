@@ -6,6 +6,7 @@ export default class Avatar extends GameNode {
     get id(): string;
     private statesNode;
     private messageBalloon;
+    private originalScale;
     private height;
     private currentState;
     private currentDicrection;
