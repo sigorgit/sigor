@@ -44,7 +44,7 @@ export default class MessageBalloon extends GameNode {
         this.content.empty().appendText(message);
         this.updateDomPosition();
         if (this.dom !== undefined) {
-            this.centerY = this.dom.rect.height / 2;
+            this.centerY = this.dom.rect.height / 2 + 10;
         }
 
         this.delay?.delete();
