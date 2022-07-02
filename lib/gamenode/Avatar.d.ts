@@ -26,5 +26,6 @@ export default class Avatar extends GameNode {
     private set direction(value);
     moveTo(x: number, y: number): void;
     showMessage(message: string): void;
+    step(deltaTime: number, x: number, y: number, scaleX: number, scaleY: number, angle: number, sin: number, cos: number, alpha: number, hidden: boolean): void;
 }
 //# sourceMappingURL=Avatar.d.ts.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"WorldUI.d.ts","sourceRoot":"","sources":["../../src/ui/WorldUI.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AAG5C,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,SAAS;IAE1C,OAAO,CAAC,OAAO,CAAU;;IASlB,UAAU;CAKpB"}
+{"version":3,"file":"WorldUI.d.ts","sourceRoot":"","sources":["../../src/ui/WorldUI.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AAG5C,OAAO,SAAS,MAAM,aAAa,CAAC;AAEpC,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,SAAS;IAEnC,SAAS,EAAE,SAAS,CAAC;IAC5B,OAAO,CAAC,OAAO,CAAU;;IAUlB,UAAU;CAOpB"}

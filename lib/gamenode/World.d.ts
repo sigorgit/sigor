@@ -1,9 +1,10 @@
 import { GameNode } from "skydapp-browser";
 import Character2D from "../datamodel/Character2D";
+import WorldUI from "../ui/WorldUI";
 import Channel from "./Channel";
 export default class World extends GameNode {
     private loginPopup;
-    private ui;
+    ui: WorldUI | undefined;
     map: Channel | undefined;
     constructor();
     private init;

@@ -2,6 +2,7 @@ import { Fullscreen, Store, WebSocketClient } from "skydapp-browser";
 import Config from "./Config";
 import Character2D from "./datamodel/Character2D";
 import UserInfo from "./datamodel/UserInfo";
+import Avatar from "./gamenode/Avatar";
 import World from "./gamenode/World";
 import FirstConnectingPopup from "./popup/FirstConnectingPopup";
 import ReconnectingPopup from "./popup/ReconnectingPopup";
@@ -77,7 +78,7 @@ class Sigor {
                 this.currentUserInfo = await this.client.send("discord-login", code);
                 const avatar = this.world?.map?.avatars[this.currentUser!];
                 if (avatar !== undefined) {
-                    this.screen.camera.target = avatar;
+                    this.setTargetAvatar(avatar);
                 }
                 return true;
             } catch (error) {
@@ -148,6 +149,17 @@ class Sigor {
         this.client.send(`${this.currentChannel}/moveTo`, x, y);
         if (this.currentUser !== undefined) {
             this.moveToHandler(this.currentUser, x, y);
+        }
+    }
+
+    public setTargetAvatar(avatar: Avatar) {
+        this.screen.camera.target = avatar;
+        this.showCordinate();
+    }
+
+    public showCordinate() {
+        if (this.screen.camera.target !== undefined) {
+            this.world?.ui?.cordinate.set(this.screen.camera.target.x, this.screen.camera.target.y);
         }
     }
 }

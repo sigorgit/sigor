@@ -8,7 +8,7 @@ import Channel from "./Channel";
 export default class World extends GameNode {
 
     private loginPopup: LoginPopup | undefined;
-    private ui: WorldUI | undefined;
+    public ui: WorldUI | undefined;
     public map: Channel | undefined;
 
     constructor() {

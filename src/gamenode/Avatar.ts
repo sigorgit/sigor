@@ -95,7 +95,7 @@ export default class Avatar extends GameNode {
         this.dom = el(".avatar-username", info.username);
 
         if (this.id === Sigor.currentUser) {
-            Sigor.screen.camera.target = this;
+            Sigor.setTargetAvatar(this);
         }
     }
 
@@ -153,6 +153,22 @@ export default class Avatar extends GameNode {
             this.messageBalloon = new MessageBalloon(-this.height * this.statesNode.scale).appendTo(this);
             this.messageBalloon.updateMessage(message);
             this.messageBalloon.on("delete", () => this.messageBalloon = undefined);
+        }
+    }
+
+    public step(
+        deltaTime: number,
+        x: number, y: number, scaleX: number, scaleY: number, angle: number, sin: number, cos: number, alpha: number, hidden: boolean,
+    ): void {
+        if (Sigor.screen.camera.target === this) {
+            let prevX = this.x;
+            let prevY = this.y;
+            super.step(deltaTime, x, y, scaleX, scaleY, angle, sin, cos, alpha, hidden);
+            if (this.x !== prevX || this.y !== prevY) {
+                Sigor.showCordinate();
+            }
+        } else {
+            super.step(deltaTime, x, y, scaleX, scaleY, angle, sin, cos, alpha, hidden);
         }
     }
 }
