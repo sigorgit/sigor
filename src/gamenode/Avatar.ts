@@ -7,10 +7,6 @@ export default class Avatar extends GameNode {
 
     private speed = 0.5;
 
-    public get id() {
-        return `${this.info.userPlatform}-${this.info.userId}`;
-    }
-
     private statesNode: StatesNode<StatesNode>;
     private messageBalloon: MessageBalloon | undefined;
 
@@ -65,9 +61,8 @@ export default class Avatar extends GameNode {
         return new StatesNode<SpriteNode>(0, 0, states);
     }
 
-    constructor(private info: {
-        userPlatform: string,
-        userId: string,
+    constructor(info: {
+        avatarId: string,
         username: string,
         x: number,
         y: number,
@@ -94,7 +89,7 @@ export default class Avatar extends GameNode {
 
         this.dom = el(".avatar-username", info.username);
 
-        if (this.id === Sigor.currentUser) {
+        if (info.avatarId === Sigor.currentUserInfo?.avatarId) {
             Sigor.setTargetAvatar(this);
         }
     }

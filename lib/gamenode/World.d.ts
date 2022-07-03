@@ -11,8 +11,7 @@ export default class World extends GameNode {
     createMap(channelInfo: {
         channelName: string;
         avatars: {
-            userPlatform: string;
-            userId: string;
+            avatarId: string;
             username: string;
             x: number;
             y: number;

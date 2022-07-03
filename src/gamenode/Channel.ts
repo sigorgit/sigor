@@ -10,8 +10,7 @@ export default class Channel extends GameNode {
     constructor(channelInfo: {
         channelName: string,
         avatars: {
-            userPlatform: string,
-            userId: string,
+            avatarId: string,
             username: string,
             x: number,
             y: number,
@@ -31,8 +30,7 @@ export default class Channel extends GameNode {
     }
 
     public createAvatar(avatarInfo: {
-        userPlatform: string,
-        userId: string,
+        avatarId: string,
         username: string,
         x: number,
         y: number,
@@ -42,9 +40,9 @@ export default class Channel extends GameNode {
     }) {
         const avatar = new Avatar(avatarInfo).appendTo(this);
         avatar.on("delete", () => {
-            delete this.avatars[avatar.id];
+            delete this.avatars[avatarInfo.avatarId];
         });
-        this.avatars[avatar.id] = avatar;
+        this.avatars[avatarInfo.avatarId] = avatar;
     }
 
     public removeAvatar(avatarId: string) {

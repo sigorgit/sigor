@@ -1,9 +1,7 @@
 import { GameNode } from "skydapp-browser";
 import Character2D from "../datamodel/Character2D";
 export default class Avatar extends GameNode {
-    private info;
     private speed;
-    get id(): string;
     private statesNode;
     private messageBalloon;
     private originalScale;
@@ -13,8 +11,7 @@ export default class Avatar extends GameNode {
     private makeSpriteNode;
     private makeDirectionStates;
     constructor(info: {
-        userPlatform: string;
-        userId: string;
+        avatarId: string;
         username: string;
         x: number;
         y: number;

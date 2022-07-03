@@ -1,5 +1,4 @@
 import { el, GameNode } from "skydapp-browser";
-import Sigor from "../Sigor";
 
 export default class Cordinate extends GameNode {
 

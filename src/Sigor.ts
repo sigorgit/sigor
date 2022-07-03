@@ -20,10 +20,6 @@ class Sigor {
     public currentChannel = "yard";
     public currentUserInfo: UserInfo | undefined;
 
-    public get currentUser() {
-        return this.currentUserInfo === undefined ? undefined : `${this.currentUserInfo.platform}-${this.currentUserInfo.userId}`;
-    }
-
     public start() {
 
         this.client = new WebSocketClient(`wss://${Config.backendHost}`);
@@ -76,7 +72,10 @@ class Sigor {
         if (code !== undefined) {
             try {
                 this.currentUserInfo = await this.client.send("discord-login", code);
-                const avatar = this.world?.map?.avatars[this.currentUser!];
+                if (this.currentUserInfo === undefined) {
+                    throw new Error("Current User Not Exists.");
+                }
+                const avatar = this.world?.map?.avatars[this.currentUserInfo.avatarId];
                 if (avatar !== undefined) {
                     this.setTargetAvatar(avatar);
                 }
@@ -114,8 +113,7 @@ class Sigor {
     }
 
     private createAvatarHandler = (info: {
-        userPlatform: string,
-        userId: string,
+        avatarId: string,
         username: string,
         x: number,
         y: number,
@@ -140,15 +138,15 @@ class Sigor {
 
     public async chat(message: string) {
         this.client.send(`${this.currentChannel}/chat`, message);
-        if (this.currentUser !== undefined) {
-            this.chatHandler(this.currentUser, message);
+        if (this.currentUserInfo !== undefined) {
+            this.chatHandler(this.currentUserInfo.avatarId, message);
         }
     }
 
     public async moveTo(x: number, y: number) {
         this.client.send(`${this.currentChannel}/moveTo`, x, y);
-        if (this.currentUser !== undefined) {
-            this.moveToHandler(this.currentUser, x, y);
+        if (this.currentUserInfo !== undefined) {
+            this.moveToHandler(this.currentUserInfo.avatarId, x, y);
         }
     }
 

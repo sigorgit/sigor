@@ -8,8 +8,7 @@ export default class Channel extends GameNode {
     constructor(channelInfo: {
         channelName: string;
         avatars: {
-            userPlatform: string;
-            userId: string;
+            avatarId: string;
             username: string;
             x: number;
             y: number;
@@ -19,8 +18,7 @@ export default class Channel extends GameNode {
         }[];
     });
     createAvatar(avatarInfo: {
-        userPlatform: string;
-        userId: string;
+        avatarId: string;
         username: string;
         x: number;
         y: number;

@@ -10,7 +10,6 @@ declare class Sigor {
     private reconnectingPopup;
     currentChannel: string;
     currentUserInfo: UserInfo | undefined;
-    get currentUser(): string | undefined;
     start(): void;
     checkDiscordLogin(): Promise<boolean>;
     enterChannel(channelName: string): Promise<void>;
