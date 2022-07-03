@@ -37,11 +37,11 @@ export default class Avatar extends GameNode {
                 if (sprite.center_x !== undefined) { node.centerX = sprite.center_x - width / 2 }
                 if (sprite.center_y !== undefined) { node.centerY = sprite.center_y - this.height / 2; }
                 if (this.messageBalloon !== undefined) {
-                    this.messageBalloon.y = -this.height * this.statesNode.scale;
+                    this.messageBalloon.y = -this.height * this.originalScale;
                 }
 
                 // shadow
-                const shadow = new CircleNode(0, 0, width * this.statesNode.scale, width * this.statesNode.scale / 2, 0x000000).appendTo(this);
+                const shadow = new CircleNode(0, 0, width * this.originalScale, width * this.originalScale / 2, 0x000000).appendTo(this);
                 shadow.alpha = 0.05;
                 this.statesNode.z = 1;
             });
@@ -145,7 +145,7 @@ export default class Avatar extends GameNode {
         if (this.messageBalloon !== undefined) {
             this.messageBalloon.updateMessage(message);
         } else {
-            this.messageBalloon = new MessageBalloon(-this.height * this.statesNode.scale).appendTo(this);
+            this.messageBalloon = new MessageBalloon(-this.height * this.originalScale).appendTo(this);
             this.messageBalloon.updateMessage(message);
             this.messageBalloon.on("delete", () => this.messageBalloon = undefined);
         }

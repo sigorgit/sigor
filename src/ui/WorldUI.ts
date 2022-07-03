@@ -14,13 +14,19 @@ export default class WorldUI extends FixedNode {
             this.cordinate = new Cordinate(),
             this.chatBar = new ChatBar(),
         );
+        window.addEventListener("resize", this.repositeUI);
     }
 
-    public repositeUI() {
+    public repositeUI = () => {
         if (this.screen !== undefined) {
             this.cordinate.move(-this.screen.centerX, this.screen.centerY);
             Sigor.showCordinate();
             this.chatBar.move(0, this.screen.centerY);
         }
+    }
+
+    public delete() {
+        window.removeEventListener("resize", this.repositeUI);
+        super.delete();
     }
 }

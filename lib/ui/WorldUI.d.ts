@@ -4,6 +4,7 @@ export default class WorldUI extends FixedNode {
     cordinate: Cordinate;
     private chatBar;
     constructor();
-    repositeUI(): void;
+    repositeUI: () => void;
+    delete(): void;
 }
 //# sourceMappingURL=WorldUI.d.ts.map
