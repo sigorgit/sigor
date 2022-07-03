@@ -365,7 +365,7 @@ eval("\n\nvar formats = __webpack_require__(/*! ./formats */ \"./node_modules/su
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports[\"default\"] = {\n    applicationId: \"989118557562494997\",\n    backendHost: \"localhost:1110\",\n};\n\n\n//# sourceURL=webpack:///./src/Config.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports[\"default\"] = {\n    applicationId: \"989118557562494997\",\n    backendHost: \"api.sigor.com\",\n};\n\n\n//# sourceURL=webpack:///./src/Config.ts?");
 
 /***/ }),
 
