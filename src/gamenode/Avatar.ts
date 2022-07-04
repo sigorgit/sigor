@@ -1,4 +1,4 @@
-import { el, GameNode, SpriteNode, StatesNode } from "skydapp-browser";
+import { CircleNode, el, GameNode, SpriteNode, StatesNode } from "skydapp-browser";
 import Character2D, { DirectionSprites, Sprite } from "../datamodel/Character2D";
 import Sigor from "../Sigor";
 import MessageBalloon from "./MessageBalloon";
@@ -41,8 +41,8 @@ export default class Avatar extends GameNode {
                 }
 
                 // shadow
-                // const shadow = new CircleNode(0, 0, width * this.originalScale, width * this.originalScale / 2, 0x000000).appendTo(this);
-                // shadow.alpha = 0.05;
+                const shadow = new CircleNode(0, 0, width * this.originalScale, width * this.originalScale / 2, 0x000000).appendTo(this);
+                shadow.alpha = 0.05;
                 this.statesNode.z = 1;
             });
 
@@ -102,18 +102,18 @@ export default class Avatar extends GameNode {
 
     private set direction(direction: string) {
         if (this.statesNode.currentStateNode !== undefined) {
-            // if (this.statesNode.currentStateNode.existsState(direction) !== true) {
-            //     if (direction === "left") {
-            //         this.statesNode.currentStateNode.state = "right";
-            //         this.statesNode.scaleX = -this.originalScale;
-            //     } else if (direction === "right") {
-            //         this.statesNode.currentStateNode.state = "left";
-            //         this.statesNode.scaleX = -this.originalScale;
-            //     }
-            // } else {
-            //     this.statesNode.scaleX = this.originalScale;
-            //     this.statesNode.currentStateNode.state = direction;
-            // }
+            if (this.statesNode.currentStateNode.existsState(direction) !== true) {
+                if (direction === "left") {
+                    this.statesNode.currentStateNode.state = "right";
+                    this.statesNode.scaleX = -this.originalScale;
+                } else if (direction === "right") {
+                    this.statesNode.currentStateNode.state = "left";
+                    this.statesNode.scaleX = -this.originalScale;
+                }
+            } else {
+                this.statesNode.scaleX = this.originalScale;
+                this.statesNode.currentStateNode.state = direction;
+            }
         }
         this.currentDicrection = direction;
     }

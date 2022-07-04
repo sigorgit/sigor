@@ -3,6 +3,7 @@ import Cordinate from "./Cordinate";
 export default class WorldUI extends FixedNode {
     cordinate: Cordinate;
     private chatBar;
+    private menu;
     constructor();
     repositeUI: () => void;
     delete(): void;

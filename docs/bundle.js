@@ -413,6 +413,17 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 
 /***/ }),
 
+/***/ "./src/gamenode/Menu.ts":
+/*!******************************!*\
+  !*** ./src/gamenode/Menu.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skydapp_browser_1 = __webpack_require__(/*! skydapp-browser */ \"../skydapp-browser/lib/index.js\");\nclass Menu extends skydapp_browser_1.GameNode {\n    constructor() {\n        super(0, 0);\n        this.width = 60;\n        this.height = 25;\n        this.dom = (0, skydapp_browser_1.el)(\".menu\", (0, skydapp_browser_1.el)(\"a\", { href: \"https://discord.com/invite/YgdruRMFtJ\", target: \"_blank\" }, (0, skydapp_browser_1.el)(\"img\", { src: \"./res/logo/discord.svg\", alt: \"discord\" })), (0, skydapp_browser_1.el)(\"a\", { href: \"https://twitter.com/sigorcsc\", target: \"_blank\" }, (0, skydapp_browser_1.el)(\"img\", { src: \"./res/logo/twitter.svg\", alt: \"twitter\" })));\n        this.dom.style({ width: this.width, height: this.height });\n    }\n}\nexports[\"default\"] = Menu;\n\n\n//# sourceURL=webpack:///./src/gamenode/Menu.ts?");
+
+/***/ }),
+
 /***/ "./src/gamenode/MessageBalloon.ts":
 /*!****************************************!*\
   !*** ./src/gamenode/MessageBalloon.ts ***!
@@ -508,7 +519,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\ncons
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skydapp_browser_1 = __webpack_require__(/*! skydapp-browser */ \"../skydapp-browser/lib/index.js\");\nconst Sigor_1 = __importDefault(__webpack_require__(/*! ../Sigor */ \"./src/Sigor.ts\"));\nconst ChatBar_1 = __importDefault(__webpack_require__(/*! ./ChatBar */ \"./src/ui/ChatBar.ts\"));\nconst Cordinate_1 = __importDefault(__webpack_require__(/*! ./Cordinate */ \"./src/ui/Cordinate.ts\"));\nclass WorldUI extends skydapp_browser_1.FixedNode {\n    constructor() {\n        super(0, 0);\n        this.repositeUI = () => {\n            if (this.screen !== undefined) {\n                this.cordinate.move(-this.screen.centerX, this.screen.centerY);\n                Sigor_1.default.showCordinate();\n                this.chatBar.move(0, this.screen.centerY);\n            }\n        };\n        this.append(this.cordinate = new Cordinate_1.default(), this.chatBar = new ChatBar_1.default());\n        window.addEventListener(\"resize\", this.repositeUI);\n    }\n    delete() {\n        window.removeEventListener(\"resize\", this.repositeUI);\n        super.delete();\n    }\n}\nexports[\"default\"] = WorldUI;\n\n\n//# sourceURL=webpack:///./src/ui/WorldUI.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skydapp_browser_1 = __webpack_require__(/*! skydapp-browser */ \"../skydapp-browser/lib/index.js\");\nconst Menu_1 = __importDefault(__webpack_require__(/*! ../gamenode/Menu */ \"./src/gamenode/Menu.ts\"));\nconst Sigor_1 = __importDefault(__webpack_require__(/*! ../Sigor */ \"./src/Sigor.ts\"));\nconst ChatBar_1 = __importDefault(__webpack_require__(/*! ./ChatBar */ \"./src/ui/ChatBar.ts\"));\nconst Cordinate_1 = __importDefault(__webpack_require__(/*! ./Cordinate */ \"./src/ui/Cordinate.ts\"));\nclass WorldUI extends skydapp_browser_1.FixedNode {\n    constructor() {\n        super(0, 0);\n        this.repositeUI = () => {\n            if (this.screen !== undefined) {\n                this.cordinate.move(-this.screen.centerX, this.screen.centerY);\n                Sigor_1.default.showCordinate();\n                this.chatBar.move(0, this.screen.centerY);\n                this.menu.move(-this.menu.width + this.screen.centerX + 20, this.menu.height / 2 - this.screen.centerY + 10);\n            }\n        };\n        this.append(this.cordinate = new Cordinate_1.default(), this.chatBar = new ChatBar_1.default(), this.menu = new Menu_1.default());\n        window.addEventListener(\"resize\", this.repositeUI);\n    }\n    delete() {\n        window.removeEventListener(\"resize\", this.repositeUI);\n        super.delete();\n    }\n}\nexports[\"default\"] = WorldUI;\n\n\n//# sourceURL=webpack:///./src/ui/WorldUI.ts?");
 
 /***/ }),
 

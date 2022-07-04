@@ -447,9 +447,23 @@ body {
   padding: 8px 12px;
   border-radius: 4px;
 }
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+.menu > a {
+  display: flex;
+  width: 25px;
+  height: 25px;
+}
+.menu > a > img {
+  width: 25px;
+  height: 25px;
+}
 .avatar-username {
   margin-top: 20px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  white-space: nowrap;
 }
 .message-balloon {
   min-width: 100px;
